@@ -1,0 +1,2 @@
+we check what current question we are on
+we have different question each time 

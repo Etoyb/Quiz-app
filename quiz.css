@@ -1,0 +1,99 @@
+body {
+  background-image: url(images/football-quiz.jpg);  
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.superDiv {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 5px;
+
+}
+.css-container {
+  background-image: url(images/background.img1.jpg);
+  border: 2px, rgb(245, 157, 226);
+  border-style: solid;
+  border-radius: 3px;
+  padding-bottom: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.css-right-side {
+  border: 2px red ;
+  border-radius: 3px;
+  border-style: solid;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: 20px 5px 20px 5px 20px 5px;
+  border-style: solid;
+  color: black;
+  margin-top: 10px;   
+  width: 50%;
+  
+}
+
+.userOne,
+.userTwo,
+.userThree 
+.deleteButton{
+}
+
+.results-grid.button {
+  font-size: 10px;
+  color: blue;
+  background-color: red;
+}
+
+h1 {
+  border: 2px rgb(243, 184, 223);
+  border-style: solid;
+  border-radius: 3px;
+  display: inline-block;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+}
+
+.cssRunQuiz {
+  background-color: rgb(245, 157, 226);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  font-size: 19px;
+  margin-bottom: 10px;
+  border: 0px;
+  box-shadow: rgb(46, 51, 52) 2px 2px 4px 4px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.cssRunQuiz:hover {
+  background-color: black;
+  color: white;
+  font-size: 24px;
+}
+
+.css-questions {
+  color: #fd74bb;
+  font-size: 25px;
+
+}
+
+
+.selectButtons {
+  color: rgb(245, 161, 235);
+  background-color: rgb(20, 20, 22);
+  font-size: 19px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.selectButtons:hover {
+  background-color:rgb(245, 161, 235) ;
+  color: rgb(20, 20, 22) ;
+  font-size: 23px;
+}
