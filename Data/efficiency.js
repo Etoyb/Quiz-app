@@ -1,5 +1,5 @@
 import { currentQuestionIndex } from "../Quiz.js"
-import { quizArray } from "../Quiz.js";
+import { quizArray } from "../Data/QuestionsArray.js";
 let buttonPressed = false;
 document.querySelector('.js-question-display').addEventListener('click', event => {
     let btn = event.target.closest('buttton')
@@ -24,9 +24,7 @@ export function efficiencyFunction () {
       Answer questions quicker to get better efficiency score`
       clearInterval(efficiencyTimer)
     }
-    document.querySelector(
-      '.efficiencyDiv'
-    ).innerHTML = `${efficiencyScoreReturn}`
+    document.querySelector('.efficiencyDiv').innerHTML = `${efficiencyScoreReturn}`
     buttonPressed = false
     console.log(efficiencyScoreReturn)
   }, 2000)
