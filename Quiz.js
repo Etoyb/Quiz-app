@@ -46,11 +46,13 @@ document.querySelector('.js-question-display').addEventListener('click', event =
     ).innerHTML = `answered  ${isCorrect} <br> 
    Correct:${score.correct} <br> Wrong:${score.wrong} <br> <br>
    You also have an accuracy of ${accuracy}% `;
+ })
 
-let score = {
+ 
+ export let score = {
   correct: 0,
   wrong: 0
-} })
+}
 
 export function questionMove () {
   if (isCorrect === 'correct') {
