@@ -62,3 +62,5 @@ export function deleteRender () {
     })
   })
 }
+
+run();
