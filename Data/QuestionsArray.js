@@ -38,8 +38,18 @@ export let quizArray = [
     correctIndex: 2
   },
   {
-    question: 'How many players have won the ballon D`or since 2015',
-    options: [6, 7, 9, 5],
-    correctIndex: 0
+    question: 'Which manager has the most Laliga titles in laliga history',
+    options: ['Pep Guardiola', 'Miguel Munoz', 'Jose Mourinho', 'Johan Cruyff'],
+    correctIndex: 1
+  },
+  {
+    question: 'Which national team has the most World cups',
+    options: ['France','Italy','Uruguay','Brazil'],
+    correctIndex: 3
+  },
+  {
+    question: 'Which player has the most league trophies',
+    options: ['Ronaldo','Messi and Manuel Nuer', 'Thomas Muller and Ryan Giggs', 'Ronaldo,Kroos,Modric and Carvajal'],
+    correctIndex: 2
   }
 ]

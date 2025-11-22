@@ -1,10 +1,7 @@
-import { deleteRender } from "../Data/userModule.js";
 import { efficiencyFunction } from "../Data/efficiency.js";
 import { quizArray } from "../Data/QuestionsArray.js";
 
-deleteRender()
-export let isCorrect
-
+export let isCorrect;
 export let currentQuestionIndex = 0
 function ShowQuestion () {
   let question = quizArray[currentQuestionIndex].question
@@ -13,9 +10,8 @@ function ShowQuestion () {
       return `<button data-value = "${index}" class = "selectButtons"> ${button} </button>`
     })
     .join(' ')
-  document.querySelector(
-    '.js-question-display'
-  ).innerHTML = `${question} <br> <br>${questionrender} <br> <br>  `
+  document.querySelector('.js-question-display')
+  .innerHTML = `${question} <br> <br>${questionrender} <br> <br>  `
 }
 
 document.querySelector('.runQuiz').addEventListener('click', () => {
@@ -25,7 +21,7 @@ let btn = document.querySelector('.runQuiz');
   efficiencyFunction() 
 })
 
- document.querySelector('.answerResultDisplay')
+document.querySelector('.answerResultDisplay')
 .innerHTML = `your scores and results will be placed in a minuete`;
 
 document.querySelector('.js-question-display').addEventListener('click', event => {
@@ -41,9 +37,8 @@ document.querySelector('.js-question-display').addEventListener('click', event =
 
     let attempts = score.correct + score.wrong
     let accuracy = Math.floor((score.correct / attempts) * 100)
-    display = document.querySelector(
-      '.answerResultDisplay'
-    ).innerHTML = `answered  ${isCorrect} <br> 
+    document.querySelector('.answerResultDisplay')
+    .innerHTML = `answered  ${isCorrect} <br> 
    Correct:${score.correct} <br> Wrong:${score.wrong} <br> <br>
    You also have an accuracy of ${accuracy}% `;
  })
@@ -60,9 +55,9 @@ export function questionMove () {
   }
   if (currentQuestionIndex > quizArray.length - 1) {
     document.querySelector('.js-question-display')
-    .innerHTML = `Your other results are packaged in that file there it will 
-    contain your accuracy and your efficiency this is just version 1 more versions
-     will come out <br> <br>  `
+    .innerHTML = `This is the end of the quiz how have you done ?
+    Do you think you did better than me 🤔 i got 100% acuuracy by the way 
+    <br> <br>  `
   } 
   ShowQuestion()
 }

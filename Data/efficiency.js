@@ -24,7 +24,8 @@ export function efficiencyFunction () {
       Answer questions quicker to get better efficiency score`
       clearInterval(efficiencyTimer)
     }
-    document.querySelector('.efficiencyDiv').innerHTML = `${efficiencyScoreReturn}`
+    document.querySelector('.efficiencyDiv').innerHTML = `Your efficiency is currently at
+    ${efficiencyScoreReturn}`
     buttonPressed = false
     console.log(efficiencyScoreReturn)
   }, 2000)
