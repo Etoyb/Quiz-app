@@ -14,7 +14,8 @@ function ShowQuestion () {
   .innerHTML = `${question} <br> <br>${questionrender} <br> <br>  `
 }
 
-document.querySelector('.runQuiz').addEventListener('click', () => {
+
+  document.querySelector('.runQuiz').addEventListener('click', () => {
 let btn = document.querySelector('.runQuiz');
  btn.remove()
   ShowQuestion()
@@ -31,23 +32,9 @@ document.querySelector('.js-question-display').addEventListener('click', event =
     let realAnswer = quizArray[currentQuestionIndex].correctIndex;
 
     isCorrect = buttonValue === realAnswer ? 'correct' : 'wrong'
-
-    questionMove()
-    isCorrect === 'correct' ? score.correct++ : score.wrong++
-
-    let attempts = score.correct + score.wrong
-    let accuracy = Math.floor((score.correct / attempts) * 100)
-    document.querySelector('.answerResultDisplay')
-    .innerHTML = `answered  ${isCorrect} <br> 
-   Correct:${score.correct} <br> Wrong:${score.wrong} <br> <br>
-   You also have an accuracy of ${accuracy}% `;
+   questionMove()
+   console.log(isCorrect)
  })
-
- 
- export let score = {
-  correct: 0,
-  wrong: 0
-}
 
 export function questionMove () {
   if (isCorrect === 'correct') {

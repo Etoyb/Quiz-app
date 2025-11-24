@@ -78,7 +78,7 @@ h1 {
 
 .css-grid {
   display: grid;
-  grid-template-columns: 30% 10px 30% 10px 30% 10px;
+  grid-template-columns: 30% 10px  30% 10px  30% 10px;
   margin-top: 20px;
 }
 
