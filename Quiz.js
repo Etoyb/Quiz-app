@@ -1,8 +1,9 @@
-import { efficiencyFunction } from "../Data/efficiency.js";
+import { efiiciencyObject } from "../Data/efficiency.js";
 import { quizArray } from "../Data/QuestionsArray.js";
 
+alert('You need to get the question right to be able to progress to the next question')
 export let isCorrect;
-export let currentQuestionIndex = 0
+export let currentQuestionIndex = 0;
 function ShowQuestion () {
   let question = quizArray[currentQuestionIndex].question
   let questionrender = quizArray[currentQuestionIndex].options
@@ -15,15 +16,15 @@ function ShowQuestion () {
 }
 
 
-  document.querySelector('.runQuiz').addEventListener('click', () => {
+document.querySelector('.runQuiz').addEventListener('click', () => {
 let btn = document.querySelector('.runQuiz');
  btn.remove()
   ShowQuestion()
-  efficiencyFunction() 
+  efiiciencyObject.efficiencyFunction() 
 })
 
 document.querySelector('.answerResultDisplay')
-.innerHTML = `your scores and results will be placed in a minuete`;
+.innerHTML = `your scores and results will be placed once you start play`;
 
 document.querySelector('.js-question-display').addEventListener('click', event => {
     const btn = event.target.closest('button')
@@ -49,3 +50,4 @@ export function questionMove () {
   ShowQuestion()
 }
 
+efiiciencyObject.checkButtonStatus();

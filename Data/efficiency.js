@@ -1,34 +1,41 @@
-import { currentQuestionIndex } from "../Quiz.js"
-import { quizArray } from "../Data/QuestionsArray.js";
-let buttonPressed = false;
-document.querySelector('.js-question-display').addEventListener('click', event => {
-    let btn = event.target.closest('buttton')
+import { currentQuestionIndex } from '../Quiz.js'
+import { quizArray } from '../Data/QuestionsArray.js'
 
-    if (btn) {
-      buttonPressed = true
-    }
-  });
-export function efficiencyFunction () {
-  let efficiencyScore = 10
-  let efficiencyScoreReturn;
+export const efiiciencyObject = {
+  buttonPressed: false,
 
- let efficiencyTimer = setInterval(() => {
-    if (currentQuestionIndex > quizArray.length - 2) {
-      clearInterval(efficiencyTimer)
-    }
-    if (!buttonPressed) {
-      efficiencyScoreReturn = efficiencyScore--
-    }
-    if (efficiencyScore < 0) {
-      efficiencyScoreReturn = `Unfortunately you have 0 efficiency. 
+  checkButtonStatus () {
+    document.querySelector('.js-question-display').addEventListener('click', event => {
+        let btn = event.target.closest('buttton')
+
+        if (btn) {
+          this.buttonPressed = true
+        }
+      })
+  },
+
+  efficiencyFunction () {
+    let efficiencyScore = 10
+    let efficiencyScoreReturn
+
+    let efficiencyTimer = setInterval(() => {
+      if (currentQuestionIndex > quizArray.length - 2) {
+        clearInterval(efficiencyTimer)
+      }
+      if (!this.buttonPressed) {
+        efficiencyScoreReturn = efficiencyScore--
+      }
+      if (efficiencyScore < 0) {
+        efficiencyScoreReturn = `Unfortunately you have 0 efficiency. 
       Answer questions quicker to get better efficiency score`
-      clearInterval(efficiencyTimer)
-    }
-    document.querySelector('.efficiencyDiv').innerHTML = `Your efficiency is currently at
+        clearInterval(efficiencyTimer)
+      }
+      document.querySelector('.efficiencyDiv').innerHTML = `Your efficiency is currently at
     ${efficiencyScoreReturn}`
-    buttonPressed = false
-    console.log(efficiencyScoreReturn)
-  }, 2000)
-  document.querySelector('.efficiencyDiv'
-  ).innerHTML = `you have a starting efficiency of 10`
+      this.buttonPressed = false
+      console.log(efficiencyScoreReturn)
+    }, 2000)
+    document.querySelector('.efficiencyDiv').innerHTML = `you have a starting efficiency of 10`
+  },
+
 }
