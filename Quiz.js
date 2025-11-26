@@ -1,7 +1,6 @@
 import { efiiciencyObject } from "../Data/efficiency.js";
 import { quizArray } from "../Data/QuestionsArray.js";
 
-alert('You need to get the question right to be able to progress to the next question')
 export let isCorrect;
 export let currentQuestionIndex = 0;
 function ShowQuestion () {
@@ -21,6 +20,7 @@ let btn = document.querySelector('.runQuiz');
  btn.remove()
   ShowQuestion()
   efiiciencyObject.efficiencyFunction() 
+  alert('You need to get the question right to be able to progress to the next question')
 })
 
 document.querySelector('.answerResultDisplay')
@@ -34,9 +34,17 @@ document.querySelector('.js-question-display').addEventListener('click', event =
 
     isCorrect = buttonValue === realAnswer ? 'correct' : 'wrong'
    questionMove()
-   console.log(isCorrect)
+
+   isCorrect === 'correct' ? score.correct++ : score.wrong++
+    document.querySelector('.answerResultDisplay').innerHTML = `${isCorrect}
+    <br> <br> Correct: ${score.correct}
+    <br> Wrong ${score.wrong}`
  })
 
+ let score = {
+  correct: 0,
+  wrong: 0
+ }
 export function questionMove () {
   if (isCorrect === 'correct') {
     currentQuestionIndex++
