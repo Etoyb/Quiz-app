@@ -1,7 +1,7 @@
 export let quizArray = [
   {
     question:
-      'How many players have won the ballon dor whilst playingin England',
+      'How many players have won the ballon dor whilst playing in England',
     options: [2, 7, 5, 6],
     correctIndex: 1
   },
@@ -51,5 +51,11 @@ export let quizArray = [
     question: 'Which player has the most league trophies',
     options: ['Ronaldo','Messi and Manuel Nuer', 'Thomas Muller and Ryan Giggs', 'Ronaldo,Kroos,Modric and Carvajal'],
     correctIndex: 2
-  }
+  },
+  question: 'Which manager has the worst league record in prem history ?',
+    options: ['Daniel Farke (Norwich City)',
+              'Paul Jewell (Derby County)',
+              'JOhn Gorman (Swindon Town)',
+              'Ruben Almiron (Manchester United)'],
+    correctIndex: 1
 ]
