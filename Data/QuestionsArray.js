@@ -52,10 +52,13 @@ export let quizArray = [
     options: ['Ronaldo','Messi and Manuel Nuer', 'Thomas Muller and Ryan Giggs', 'Ronaldo,Kroos,Modric and Carvajal'],
     correctIndex: 2
   },
+
+  {
   question: 'Which manager has the worst league record in prem history ?'
     options: ['Daniel Farke (Norwich City)',
               'Paul Jewell (Derby County)',
               'JOhn Gorman (Swindon Town)',
               'Ruben Almiron (Manchester United)'],
     correctIndex: 0
+}
 ]
