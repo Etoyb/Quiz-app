@@ -54,7 +54,7 @@ export let quizArray = [
   },
 
   {
-  question: 'Which manager has the worst league record in prem history ?'
+  question: 'Which manager has the worst league record in prem history ?',
     options: ['Daniel Farke (Norwich City)',
               'Paul Jewell (Derby County)',
               'JOhn Gorman (Swindon Town)',
